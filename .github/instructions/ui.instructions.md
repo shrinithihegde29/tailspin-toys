@@ -20,6 +20,12 @@ Refer to technology-specific instruction files:
 
 ## Core Principles
 
+### Comments and Component Documentation
+
+- Comments should capture intent, constraints, or accessibility/design decisions—not describe obvious HTML, CSS classes, or control flow.
+- Keep comments current; update or remove them whenever the related component changes.
+- Every reusable `.astro` component must define a documented `Props` interface in its frontmatter. Treat it as the component API and document non-obvious props, defaults, and accessibility requirements.
+
 ### Testability
 
 - Every interactive element MUST include a `data-testid` attribute
@@ -68,3 +74,8 @@ Refer to technology-specific instruction files:
    - Test keyboard navigation
    - Check focus states
    - Validate semantic structure
+
+## Formatting
+
+- Use two spaces in Astro files and keep markup attributes readable and consistently ordered.
+- Use Tailwind utilities rather than introducing one-off CSS; comments are reserved for the reason a utility or structure is non-obvious.
